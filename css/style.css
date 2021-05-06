@@ -6,4 +6,27 @@
 
 body {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Original Surfer', cursive;
+    font-size: 50px;
+    color: #ffffff;
+    text-shadow: 2px 3px #5a5a5a;
+    background-image: linear-gradient(to top right, #08AFA8, #6D08AF);
+}
+
+@keyframes mytext{
+    from {
+        transform: scale(2);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+#countdown {
+    animation-name: mytext;
+    animation-duration: 1s;
+    animation-iteration-count: 35;
 }

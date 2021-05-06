@@ -27,7 +27,16 @@ for (i = 0; i < 5; i ++) {
 alert("These are the numbers you must memorize " + numbers);
 //
 
-
+var seconds = 30;
+var countdown = setInterval(function() {
+    document.getElementById("countdown").innerHTML = seconds;
+    if (seconds == 0) {
+        document.getElementById("countdown").innerHTML = "Time's up!"
+        clearInterval(countdown);
+    } else {
+        seconds--;
+    }
+}, 1000);
 
 // User types 5 numbers and program checks if present in previous array
 setTimeout(function() {   
@@ -49,8 +58,14 @@ setTimeout(function() {
             correctNumbers.push(choices[i]);
         }
     }
+    
+    if (correctNumbers.length == 0) {
+        document.getElementById("countdown").innerHTML = "You definitely should improve your memory!"
+    } else if (correctNumbers.length > 0 && correctNumbers.length < 3) {
+        document.getElementById("countdown").innerHTML = "Mmmmh, you can do better.. here are the remembered numbers: " + correctNumbers;
+    } else {
+        document.getElementById("countdown").innerHTML = "Well done! Here are the correct numbers: " + correctNumbers;
+    }
 
-    console.log(correctNumbers);
-
-}, 3000)
+}, 32000)
 //
