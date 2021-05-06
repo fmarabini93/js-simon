@@ -28,5 +28,5 @@ body {
 #countdown {
     animation-name: mytext;
     animation-duration: 1s;
-    animation-iteration-count: 35;
+    animation-iteration-count: 36;
 }
