@@ -58,13 +58,13 @@ setTimeout(function() {
             correctNumbers.push(choices[i]);
         }
     }
-    
+
     if (correctNumbers.length == 0) {
-        document.getElementById("countdown").innerHTML = "You definitely should improve your memory!"
+        document.getElementById("countdown").innerHTML = "You definitely should improve your memory! <i class='fas fa-frown-open'></i>"
     } else if (correctNumbers.length > 0 && correctNumbers.length < 3) {
-        document.getElementById("countdown").innerHTML = "Mmmmh, you can do better.. here are the remembered numbers: " + correctNumbers;
+        document.getElementById("countdown").innerHTML = "Mmmmh, you can do better <i class='fas fa-meh'></i> .. here are the remembered numbers: " + correctNumbers;
     } else {
-        document.getElementById("countdown").innerHTML = "Well done! Here are the correct numbers: " + correctNumbers;
+        document.getElementById("countdown").innerHTML = "Well done! <i class='fas fa-grin-wink'></i> Here are the correct numbers: " + correctNumbers;
     }
 
 }, 32000)
